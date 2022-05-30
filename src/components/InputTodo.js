@@ -24,16 +24,16 @@ class InputTodo extends Component {
 
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleSubmit} className="form-container">
         <input
           type="text"
-          placeholder="Add Todo..."
+          className="input-text"
+          placeholder="Add todo..."
           value={this.state.title}
           name="title"
           onChange={this.onChange}
-          onSubmit={this.handleSubmit}
         />
-        <button>Submit</button>
+        <button className="input-submit">Submit</button>
       </form>
     );
   }
