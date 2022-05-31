@@ -1,10 +1,14 @@
-import React, { useState } from "react";
-import { FaPlusCircle } from "react-icons/fa";
-import { IconContext } from "react-icons";
+/* eslint-disable no-alert */
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/button-has-type */
+import React, { useState } from 'react';
+import { FaPlusCircle } from 'react-icons/fa';
+import { IconContext } from 'react-icons';
 
 const InputTodo = (props) => {
   const [inputText, setInputText] = useState({
-    title: "",
+    title: '',
   });
 
   const onChange = (e) => {
@@ -19,10 +23,10 @@ const InputTodo = (props) => {
     if (inputText.title.trim()) {
       props.addTodoProps(inputText.title);
       setInputText({
-        title: "",
+        title: '',
       });
     } else {
-      alert("Please write item");
+      alert('Please write item');
     }
   };
 
@@ -39,9 +43,9 @@ const InputTodo = (props) => {
       <button className="input-submit">
         <IconContext.Provider
           value={{
-            color: "darkcyan",
-            style: { fontSize: "20px", color: "#ff0000" },
-            className: "submit-iconn",
+            color: 'darkcyan',
+            style: { fontSize: '20px', color: '#ff0000' },
+            className: 'submit-iconn',
           }}
         >
           <button className="input-submit">
